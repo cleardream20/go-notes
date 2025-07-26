@@ -1,0 +1,20 @@
+GitHub Repository Report: {{.Repo}}
+===== {{len .Issues}} Issues =====
+{{range .Issues}}
+#{{.Number}} {{.Title}}
+State: {{.State}}
+Created: {{.CreatedAt.Format "2006-01-02"}}
+User: {{.User.Login}} ({{.User.HTMLURL}})
+{{end}}
+
+===== {{len .Milestones}} Milestones =====
+{{range .Milestones}}
+##{{.Number}} {{.Title}}
+{{.Description}}
+Progress: {{.ClosedIssues}}/{{add .OpenIssues .ClosedIssues}} issues closed
+{{end}}
+
+===== {{len .Users}} Users =====
+{{range $login, $user := .Users}}
+- {{$login}} ({{$user.HTMLURL}})
+{{end}}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Report: {{.Repo}}</title>
+    <style>
+        body { font-family: Arial; margin: 2em; }
+        .issue { border: 1px solid #ddd; padding: 1em; margin-bottom: 1em; }
+        .closed { background-color: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h1>GitHub Repository: {{.Repo}}</h1>
+    
+    <h2>{{len .Issues}} Issues</h2>
+    {{range .Issues}}
+    <div class="issue {{.State}}">
+        <h3>#{{.Number}} {{.Title}}</h3>
+        <p>State: <strong>{{.State}}</strong></p>
+        <p>Created: {{.CreatedAt.Format "Jan 2, 2006"}}</p>
+        <p>User: <a href="{{.User.HTMLURL}}">{{.User.Login}}</a></p>
+    </div>
+    {{end}}
+
+    <h2>{{len .Milestones}} Milestones</h2>
+    {{range .Milestones}}
+    <div class="milestone">
+        <h3>Milestone #{{.Number}}: {{.Title}}</h3>
+        <p>{{.Description}}</p>
+        <progress 
+            value="{{.ClosedIssues}}" 
+            max="{{add .ClosedIssues .OpenIssues}}">
+        </progress>
+        <span>{{.ClosedIssues}}/{{add .ClosedIssues .OpenIssues}} closed</span>
+    </div>
+    {{end}}
+
+    <h2>{{len .Users}} Contributors</h2>
+    <ul>
+    {{range $login, $user := .Users}}
+        <li><a href="{{$user.HTMLURL}}">{{$login}}</a></li>
+    {{end}}
+    </ul>
+</body>
+</html>

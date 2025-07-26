@@ -1,0 +1,11 @@
+mode: set
+example.com/go-demo/ch11/stringutil/internal.go:6.29,7.50 1 1
+example.com/go-demo/ch11/stringutil/internal.go:7.50,9.3 1 1
+example.com/go-demo/ch11/stringutil/internal.go:13.31,17.2 3 1
+example.com/go-demo/ch11/stringutil/internal.go:19.37,20.20 1 0
+example.com/go-demo/ch11/stringutil/internal.go:20.20,22.6 1 0
+example.com/go-demo/ch11/stringutil/internal.go:24.5,25.33 2 0
+example.com/go-demo/ch11/stringutil/internal.go:25.33,26.37 1 0
+example.com/go-demo/ch11/stringutil/internal.go:26.37,28.10 1 0
+example.com/go-demo/ch11/stringutil/internal.go:29.9,29.37 1 0
+example.com/go-demo/ch11/stringutil/internal.go:31.5,31.20 1 0
