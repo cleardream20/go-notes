@@ -5,7 +5,7 @@ Welcome to GoLang family!
 Some notes &amp; tips for new goer 
 
 ## intro
-### go-demo
+### go-demos
 Commentary on the [《Go语言圣经》](https://golang-china.github.io/gopl-zh/) or [《The Go Programming Language》](https://www.gopl.io/)
 
 which is suitable for new goers, including some guide on go language environment configuration and so on
