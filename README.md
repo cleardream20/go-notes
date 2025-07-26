@@ -11,7 +11,7 @@ Commentary on the [《Go语言圣经》](https://golang-china.github.io/gopl-zh/
 which is suitable for new goers, including some guide on go language environment configuration and so on
 
 ### go-cli
-An advanced go project to build a command-line interface(cli) with golang
+An advanced go project to build a command-line interface(cli) application with golang
 
 Apply the knowledge you have learned in practical situations!
 
